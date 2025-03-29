@@ -70,24 +70,29 @@ function Card() {
           ) : null}
 
           {/* Projects Section */}
-          {selectedTopic.name === "Projects" ? (
-            <>
-              <p className="extra-description">
-                {selectedTopic.descriptionProjects}
+          {selectedTopic.name === "Projects" && (
+            <button
+              onClick={() => window.open("https://github.com/Haruni26/Personal-Website-1", "_blank")}
+              className="project-link"
+            >
+              Personal Website 1
+              <p className="project-description">
+                First project and attempt in making a personal website/portfolio
               </p>
-            </>
-          ) : null}
+            </button>
+          )}
 
           {/* Contacts Section (Icons need fixing) */}
           {selectedTopic.name === "Contacts" ? (
             <>
-              <button onClick={gmailLink} className="contact-box">
+              <button onClick={gmailLink} className="link-box">
                 Gmail
               </button>
-              <button onClick={githubLink} className="contact-box">
-                <div>Github</div>
+              <button onClick={githubLink} className="link-box">
+                Github
               </button>
-              <button onClick={linkedinLink} className="contact-box">
+
+              <button onClick={linkedinLink} className="link-box">
                 LinkedIn
               </button>
             </>
